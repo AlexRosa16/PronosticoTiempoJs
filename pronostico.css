@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 80px;
+    
+}
+
+.segundoheader {
+    background-image: url(cielopagina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.principal {
+    display: flex;
+}
+
+.principal1 {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items:center; /* Align items at the top */
+    margin: 50px ; /* Center horizontally with auto for left and right margins */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left; /* Center text inside the container */
+}
+
+
+.principal1 h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.principal1 h3 {
+    color: #555;
+}
+
+.principal1 select,
+.principal1 input[type="date"],[type="text"] {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.principal2 {
+    width: 50%;
+    height: 600px;
+    border-left: 2px solid #333;
+}
+
+
+.nublado{
+    width: 50px;
+}
+
+.prueba{
+    margin-right: 80 px;
+}
+
+.footerdiv{
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+#resultados {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 5px;
+}
+
+#resultados > p {
+    margin: 0;
+    padding: 10px;
+}
+
+#resultados > p:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+#resultados > p:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.imagendias{
+    width: 90px;
+
+}
+.divprincipaldiario {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    height: 600px;
+}
+
+
+
+.divtemperaturas {
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+
+.nombredia {
+    text-align: center;
+}
+
+#divDiaInformacion {
+    display: flex;
+    position: absolute;
+    left: 110px;
+    gap: 10px;
+    top: -8px;}
+
+#divDiaInformacion > img {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#divDiaInformacion > p:nth-child(2){
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#divDiaInformacion > p:nth-child(3) {
+    font-size: large;
+    margin-top: 40px;
+
+   
+
+}
+
+
+.sumariodatos {
+    width: 150px;
+    position: absolute;
+    top: 18px;
+    
+}
+
+
+.divimagen{
+    width: 100px;
+
+}
+
+.divtdedia{
+    margin-top: 300px;
+
+}
+
+
+#myChart{
+    position: absolute;
+    right: 449px;
+    gap: 10px;
+    top: 569px;
+}
+
+.panel{
+    display: flex;
+  position: absolute;
+  left: 121px;
+  gap: 42px;
+  top: 132px;
+}

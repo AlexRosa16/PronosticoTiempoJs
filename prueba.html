@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener día de la semana</title>
+    
+</head>
+<body>
+    <label for="fecha">Selecciona una fecha:</label>
+    <input type="date" id="fecha" onchange="obtenerDiaSemana()">
+    
+    <script>
+        function obtenerDiaSemana() {
+            // Obtener el valor de la fecha desde el input
+            var fechaInput = document.getElementById('fecha').value;
+            console.log(fechaInput);
+
+
+            // Crear un objeto de tipo Date con la fecha seleccionada
+            var fecha = new Date(fechaInput);
+
+            // Obtener el día de la semana (0: domingo, 1: lunes, ..., 6: sábado)
+            var diaSemana = fecha.getDay();
+            console.log(diaSemana);
+
+
+            var diaDelMes = fecha.getDate();
+            console.log(diaDelMes);
+
+            // Array con los nombres de los días de la semana
+            var diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+            console.log(diasSemana);
+
+
+            // Obtener el nombre del día de la semana
+            var nombreDiaSemana = diasSemana[diaSemana];
+            console.log(nombreDiaSemana);
+
+
+
+
+        }
+    </script>
+</body>
+</html>

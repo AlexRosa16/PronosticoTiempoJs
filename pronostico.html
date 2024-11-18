@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronostico</title>
+    <link rel="stylesheet" href="pronostico.css">
+
+</head>
+<body>
+    <header>
+        <img src="iconocielo.png">
+    </header>
+    <div class="segundoheader">
+        <img class="nublado" src="nublado.png">
+        <h1>EL TIEMPO API</h1>
+        <h3>Busca el pronostico de donde quieras</h3>
+    </div>  
+    <div class="principal">
+        <div class="principal1">
+            <div class="prueba">
+                <h3>Elige tu Localidad:</h3>
+                <input type="text" id="pueblos" onclick="FiltrarCiudades()">
+                <div id="resultados"></div>
+            </div>
+            <div>
+                <h3>Desde:</h3>
+                <label for="FechaPronostico1">Fecha Pronóstico:</label>
+                <input type="date" id="FechaPronostico1" name="FechaPronostico1" value="2024-01-01" min="2024-01-01" max="2050-12-31">
+            </div>
+            
+            <div>
+                <h3>Hasta:</h3>
+                <label for="FechaPronostico2">Fecha Pronóstico:</label>
+                <input type="date" id="FechaPronostico2" name="FechaPronostico2" value="2024-01-01" min="2024-01-01" max="2050-12-31">
+            </div>
+            <br>
+            <div>
+                <button type="submit" id="submitButton" onclick="MostrarDatos()">Buscar</button>
+            </div>
+            
+        </div>
+        <div class="principal2">
+            <div id="diario"></div>
+            <div>
+                <canvas id="myChart" width="370" height="190"></canvas>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footerdiv">
+        <p>© 2023-2024 Copyright: pronosticoalex.com</p>
+    </div>
+
+
+    <script src="pronostico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Obtiene el contexto del lienzo
+        const ctx = document.getElementById('myChart').getContext('2d');
+    
+    
+        // Crea el gráfico
+        new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    },
+    options: {
+        maintainAspectRatio: false, // Agrega esta línea para desactivar el mantenimiento del aspecto
+        responsive: false, // Agrega esta línea para desactivar la respuesta al tamaño
+        aspectRatio: 1, // Puedes ajustar esto según tus necesidades
+    }
+});
+    </script>
+    
+    
+    
+</body>
+</html>
